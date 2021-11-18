@@ -1,0 +1,20 @@
+name: 'replace-env-file-action'
+author: 'QGX Pagamentos'
+description: 'Replace or add a new key in key-value files'
+inputs:
+  path:
+    description: 'File path'
+    required: true
+  map:
+    description: 'Key value list'
+    required: true
+  add_if_not_exist:
+    description: 'Add if there is no key'
+    required: false
+    default: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'list'
+  color: 'purple'
